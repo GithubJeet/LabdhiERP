@@ -1,0 +1,33 @@
+[
+    {
+        "SiteIncharge":"Mahendra",
+        "OrderId":"a123",
+        "OrderDate":"30-Jan-2020",
+        "MaterialName":"Steel",
+        "MaterialQuantity":10
+    },
+
+    {
+        "SiteIncharge":"Dhirendra",
+        "OrderId":"a456",
+        "OrderDate":"20-Jan-2020",
+        "MaterialName":"Screw",
+        "MaterialQuantity":15
+    },
+
+    {
+        "SiteIncharge":"Jitendra",
+        "OrderId":"a789",
+        "OrderDate":"10-Jan-2020",
+        "MaterialName":"Paint",
+        "MaterialQuantity":5
+    },
+
+    {
+        "SiteIncharge":"Bindu",
+        "OrderId":"a890",
+        "OrderDate":"12-Feb-2020",
+        "MaterialName":"Gold",
+        "MaterialQuantity":25
+    }
+]
