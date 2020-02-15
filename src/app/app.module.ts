@@ -2,21 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import {AppRoutingModule,  routingComponents } from'./shared/app-routing.module';
 
 import { AppComponent } from './app.component';
-import { OrderComponent } from './order/order.component';
-import {OrderListComponent} from './order/order-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OrderComponent,
-    OrderListComponent
+    routingComponents
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   bootstrap: [AppComponent]
 })
