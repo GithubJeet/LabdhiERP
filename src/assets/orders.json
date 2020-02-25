@@ -4,7 +4,8 @@
         "OrderId":"a123",
         "OrderDate":"30-Jan-2020",
         "MaterialName":"Steel",
-        "MaterialQuantity":10
+        "MaterialQuantity":10,
+        "Unit":"KG"
     },
 
     {
@@ -12,7 +13,8 @@
         "OrderId":"a456",
         "OrderDate":"20-Jan-2020",
         "MaterialName":"Screw",
-        "MaterialQuantity":15
+        "MaterialQuantity":15,
+        "Unit":"KG"
     },
 
     {
@@ -20,7 +22,8 @@
         "OrderId":"a789",
         "OrderDate":"10-Jan-2020",
         "MaterialName":"Paint",
-        "MaterialQuantity":5
+        "MaterialQuantity":5,
+        "Unit":"KG"
     },
 
     {
@@ -28,6 +31,7 @@
         "OrderId":"a890",
         "OrderDate":"12-Feb-2020",
         "MaterialName":"Gold",
-        "MaterialQuantity":25
+        "MaterialQuantity":25,
+        "Unit":"KG"
     }
 ]
