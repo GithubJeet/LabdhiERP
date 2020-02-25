@@ -11,6 +11,7 @@ export class OrderListComponent implements OnInit{
 
 title = 'Order List';
 filteredOrders : any;//IOrder[] = [];
+listFilter='';
 
 constructor(private orderService : OrderService){
 

@@ -1,7 +1,8 @@
 export interface IOrder {
-orderId:string;
-orderName:string;
+OrderId:string;
+OrderName:string;
 SiteIncharge:string;
 MaterialName:string;
-MaterialQuantity:number
+MaterialQuantity:number;
+OrderDate:string;
 }

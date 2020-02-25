@@ -18,11 +18,11 @@
             <table class='table' >
                 <thead>
                     <tr>
-                        <th>
+                        <!-- <th>
                             <button class='btn btn-primary' (click)='toggleImage()'>
                                 {{showImage ? 'Hide' : 'Show' }} Image
                             </button>
-                        </th>
+                        </th> -->
                         <th>Order Id</th>
                         <th>Orde Date</th>
                         <th>Site Incharge</th>
@@ -32,13 +32,13 @@
                 </thead>
                 <tbody>
                     <tr *ngFor='let order of filteredOrders'>
-                        <td>
+                        <!-- <td>
                             <img *ngIf='showImage'
                                  [src]='order.imageUrl'
                                  [title]='order.orderName'
                                  [style.width.px]='imageWidth'
                                  [style.margin.px]='imageMargin'>
-                        </td>
+                        </td> -->
                         <td>
                             <a routerLink="/order">
                             {{order.OrderId}} </a>
@@ -53,6 +53,6 @@
         </div>
     </div>
 </div>
-<div *ngIf='errorMessage' class='alert alert-danger'>
+<!-- <div *ngIf='errorMessage' class='alert alert-danger'>
     Error: {{ errorMessage }}
-</div>
+</div> -->
