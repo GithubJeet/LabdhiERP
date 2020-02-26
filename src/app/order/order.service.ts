@@ -19,6 +19,18 @@ export class OrderService{
         return this.http.get(this.orderUrl);
     }
 
+    addOrder(){
+        console.log('service - Add Order');
+    }
+
+    updateOrder(){
+        console.log('service - Update Order');
+    }
+
+    deleteOrder(){
+        console.log('service - Delete Order');
+    }
+
     // getLink(): SafeUrl{
     //     return this.sanitizer.bypassSecurityTrustUrl(this.orderUrl);
     // }

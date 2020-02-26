@@ -22,4 +22,17 @@ ngOnInit(): void{
         next : orders => this.filteredOrders = orders
 })}
 
+addOrder(){
+    this.orderService.addOrder();
+  }
+
+  deleteOrder(){
+    this.orderService.deleteOrder();
+  }
+
+  updateOrder(){
+    this.orderService.updateOrder();
+  }
+
+
 }
