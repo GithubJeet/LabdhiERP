@@ -41,7 +41,7 @@
                                  [style.margin.px]='imageMargin'>
                         </td> -->
                         <td>
-                            <a routerLink="/order">
+                            <a (click)='getOrder(order)'>
                             {{order.OrderId}} </a>
                         </td>
                         <td>{{order.OrderDate}}</td>
@@ -56,7 +56,7 @@
     </div>
 </div>
 <div>
-    <button name="addOrder" (click)='addOrder()'>Add Order</button>
+    <button name="addOrder" (click)='createOrder()'><a routerLink="/order">Add Order</a></button>
     <button name="updateOrder" (click)='updateOrder()'>Update Order</button>
     <button name="deleteOrder" (click)='deleteOrder()'>Delete Order</button>  
 </div>

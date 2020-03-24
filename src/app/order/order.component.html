@@ -1,13 +1,12 @@
 <div class='card'> 
     <div class='card-header'>Order form</div>
     <div class='card-body'>
-
         <div class='row'>
             <div class='col-md-8'>
                 <div class='row'>
                     <div class='col-md-4'>Site Incharge</div>
                     <div class='col-md-8'>
-                        <input type="text" [(ngModel)]='order.SiteIncharge'  />
+                        <input type="text" [(ngModel)]='orderService.currentOrder.SiteIncharge'  />
                     </div>
                 </div>
             </div>  
@@ -17,7 +16,7 @@
                 <div class='row'>
                     <div class='col-md-4'>Order Id</div>
                     <div class='col-md-8'>
-                        <input type="text" [(ngModel)]='order.OrderId' />
+                        <input type="text" [(ngModel)]='orderService.currentOrder.OrderId' />
                     </div>
                 </div>
             </div>
@@ -28,7 +27,7 @@
                 <div class='row'>
                     <div class='col-md-4'>Order Date</div>
                     <div class='col-md-8'>
-                        <input type="text" [(ngModel)]='order.OrderDate' />
+                        <input type="text" [(ngModel)]='orderService.currentOrder.OrderDate' />
                     </div>
                 </div>
             </div>
@@ -39,7 +38,7 @@
                 <div class='row'>
                     <div class='col-md-4'>Material Name</div>
                     <div class='col-md-8'>
-                        <input type="text" [(ngModel)]='order.MaterialName'/>
+                        <input type="text" [(ngModel)]='orderService.currentOrder.MaterialName'/>
                     </div>
                 </div>
             </div>
@@ -50,7 +49,7 @@
                 <div class='row'>
                     <div class='col-md-4'>Quantity</div>
                     <div class='col-md-8'>
-                        <input type="text" [(ngModel)] = 'order.MaterialQuantity' />
+                        <input type="text" [(ngModel)] = 'orderService.currentOrder.MaterialQuantity' />
                     </div>
                 </div>
             </div>
@@ -61,18 +60,16 @@
                 <div class='row'>
                     <div class='col-md-4'>Unit</div>
                     <div class='col-md-8'>
-                        <input type="text" [(ngModel)] = 'order.Unit' />
+                        <input type="text" [(ngModel)] = 'orderService.currentOrder.Unit' />
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>   
     <div class='card-footer'>
                         <!-- (click)='onSubmit()' -->
         <button class='btn btn-outline-secondary'
-                style='width:80px'>
+                style='width:80px' (click)='createOrUpdateOrder(orderService.currentOrder)'>
         <i class='fa fa-chevron-left'>Submit</i>    
         </button>
         <a routerLink="/orderList">Back</a>

@@ -1,4 +1,5 @@
 export interface IOrder {
+id:number;
 OrderId:string;
 OrderName:string;
 SiteIncharge:string;

@@ -18,10 +18,29 @@ export class OrderComponent implements OnInit {
     }
 
     ngOnInit():void{
-        this.orderService.getOrder(12).subscribe({
-            next: orders => this.order  = orders[0]
-            //next: orders => (console.log('All' + JSON.stringify(orders[0])))
-        });
+        // this.orderService.getOrder(12).subscribe({
+        //     next: orders => this.order  = orders[0]
+        //     //next: orders => (console.log('All' + JSON.stringify(orders[0])))
+        // });
     }
 
+    createOrUpdateOrder(order : IOrder){
+      console.log(JSON.stringify(order));
+        if (order.id ==null)
+          { 
+            console.log('create order');
+            this.orderService.addOrder(order).subscribe(
+                (data) => {
+                  this.orderService.getAllOrders();
+                });
+          }
+        else
+          {
+            console.log('update order');
+            this.orderService.updateOrder(order).subscribe(
+              (data) => {
+                this.orderService.getAllOrders();
+              });
+          }  
+        }
 }
