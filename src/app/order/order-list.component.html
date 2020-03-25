@@ -29,6 +29,8 @@
                         <th>Materials</th>
                         <th>Quantitiy</th>
                         <th>Unit</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,15 +42,22 @@
                                  [style.width.px]='imageWidth'
                                  [style.margin.px]='imageMargin'>
                         </td> -->
-                        <td>
-                            <a (click)='getOrder(order)'>
-                            {{order.OrderId}} </a>
-                        </td>
+                        <td>{{order.OrderId}}</td>
                         <td>{{order.OrderDate}}</td>
                         <td>{{order.SiteIncharge}}</td>
                         <td>{{order.MaterialName}}</td>
                         <td>{{order.MaterialQuantity}}</td>
                         <td>{{order.Unit}}</td>
+                        <td>
+                            <a class='btn' (click)= 'editOrder(order)' >
+                                <i class="fa fa-edit"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a class='btn' (click)= 'deleteOrder(order.id)' >
+                                <i class='fa fa-trash'></i>
+                            </a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -57,8 +66,6 @@
 </div>
 <div>
     <button name="addOrder" (click)='createOrder()'><a routerLink="/order">Add Order</a></button>
-    <button name="updateOrder" (click)='updateOrder()'>Update Order</button>
-    <button name="deleteOrder" (click)='deleteOrder()'>Delete Order</button>  
 </div>
 <!-- <div *ngIf='errorMessage' class='alert alert-danger'>
     Error: {{ errorMessage }}

@@ -22,15 +22,20 @@ ngOnInit(): void{
 //       next : orders => this.filteredOrders = orders
 // });
 
-this.orderService.getAllOrders().subscribe(
+this.getAllOrders();
+
+}
+
+getAllOrders()
+{
+  this.orderService.getAllOrders().subscribe(
     (data : IOrder[]) =>
     {
      this.filteredOrders = data    
     });
-
 }
 
-getOrder(order :IOrder){
+editOrder(order :IOrder){
   console.log('getOrder start ' + JSON.stringify(order));
   this.orderService.getOrder(order.id).subscribe(
     (data : IOrder) =>
@@ -54,8 +59,13 @@ createOrder()
   }
 }
 
-deleteOrder(){
-  //this.orderService.deleteOrder();
+deleteOrder(id: number){
+  this.orderService.deleteOrder(id).subscribe(
+    (data : IOrder) =>
+    {
+      this.getAllOrders();
+    }  
+  );
 }
 
 }
