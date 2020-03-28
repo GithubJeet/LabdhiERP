@@ -6,6 +6,7 @@ import { WelcomeComponent} from '../home/welcome.component';
 
 const routes: Routes =[
     {path:'order' , component: OrderComponent},
+    {path: 'order/:id', component : OrderComponent},
     {path:'orderList',component:OrderListComponent},
     {path:'welcome', component:WelcomeComponent}
 ];

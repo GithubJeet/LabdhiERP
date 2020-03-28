@@ -1,4 +1,5 @@
 import { Component , OnInit} from '@angular/core';
+import  {Routes, RouterModule, Router} from '@angular/router';
 import { OrderService } from './order.service';
 import { IOrder } from './order';
 
@@ -13,7 +14,7 @@ title = 'Order List';
 filteredOrders : any;//IOrder[] = [];
 listFilter='';
 
-constructor(private orderService : OrderService){
+constructor(private orderService : OrderService ,private router: Router){
 }
 
 ngOnInit(): void{
@@ -40,7 +41,8 @@ editOrder(order :IOrder){
   this.orderService.getOrder(order.id).subscribe(
     (data : IOrder) =>
     {
-        this.orderService.currentOrder = data;      
+        this.orderService.currentOrder = data;
+        this.router.navigate(['/order',{id : order.id}]);      
     });
 }
 
